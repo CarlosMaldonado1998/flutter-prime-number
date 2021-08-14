@@ -45,7 +45,7 @@ Esta es una función que nos permite mostrar los números primos que se encuentr
   }
 
 ```
-## Código 
+## Código funciones 
 
 ![App Screenshot](https://raw.githubusercontent.com/CarlosMaldonado1998/flutter-prime-number/master/Images/function.png)
 
