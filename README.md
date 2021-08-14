@@ -1,16 +1,56 @@
-# numeros_primos
+# Número primos
 
-A new Flutter project.
+A new flutter proyect 
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+Para este ejercicio se usado una función que nos permita validar que el número sea primo y una función que genere el listado. 
 
-A few resources to get you started if this is your first Flutter project:
+## _checkPrimerNumber()
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+Esta es una función que comprueba si es un número primo y retorna un valor booleano. 
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```javascript
+ bool _checkPrimerNumber(int value) {
+    bool primo = true;
+    for (var i = 2; i < value; i++) {
+      if (value % i == 0) {
+        primo = false;
+        break;
+      }
+    }
+    return primo;
+  }
+```
+
+
+## _generateNumbers()
+
+Esta es una función que nos permite mostrar los números primos que se encuentran en entre 1 y 100 se ha usado la función _generateNumbers la cual es una función que realiza un ciclo while, a la vez que va guardando un string con los números primos. 
+
+
+```javascript
+ int _start = 1;
+ int _end = 100;
+ String _values = "";
+
+ void _generateNumbers() {
+    while (_start < _end) {
+      if (_checkPrimerNumber(_start)) {
+        setState(() {
+          _values += _start.toString() + "   ";
+        });
+      }
+      _start++;
+    }
+  }
+
+```
+## Código 
+
+![App Screenshot](https://raw.githubusercontent.com/CarlosMaldonado1998/flutter-prime-number/master/Images/function.png)
+
+## Imágenes 
+
+![App Screenshot](https://raw.githubusercontent.com/CarlosMaldonado1998/flutter-prime-number/master/Images/app.png)
+![App Screenshot](https://raw.githubusercontent.com/CarlosMaldonado1998/flutter-prime-number/master/Images/app2.png)
+
